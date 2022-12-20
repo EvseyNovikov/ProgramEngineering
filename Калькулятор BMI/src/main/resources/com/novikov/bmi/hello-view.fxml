@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.novikov.bmi.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label fx:id="welcomeText" />
+   <Label fx:id="weightLabel" text="Введите рост" />
+   <TextField fx:id="weightField" text="182" />
+   <Label fx:id="HeightLabel" text="Введите вес" />
+   <TextField fx:id="heightField" text="52" />
+   <Label text="Результат" />
+   <TextField fx:id="resultField" onAction="#make_calculation" />
+   <Button fx:id="calcButton" mnemonicParsing="false" onAction="#make_calculation" text="Посчитать" />
+</VBox>
+

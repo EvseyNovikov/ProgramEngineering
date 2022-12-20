@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="323.0" prefWidth="382.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.custompoligon.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Выберите 1 из фигур" />
+    <Canvas fx:id="my_canvas" height="200.0" width="200.0" />
+   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="poly" mnemonicParsing="false" onAction="#on5GonClick" text="Полигон">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin></Button>
+         <Button fx:id="line" mnemonicParsing="false" onAction="#onLineClick" text="Линия">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin></Button>
+         <Button fx:id="tring" mnemonicParsing="false" onAction="#onTringClick" text="Треугольник">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin></Button>
+         <Button fx:id="react" mnemonicParsing="false" onAction="#onReactClick" text="Прямоугольник">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin></Button>
+      </children>
+   </HBox>
+</VBox>

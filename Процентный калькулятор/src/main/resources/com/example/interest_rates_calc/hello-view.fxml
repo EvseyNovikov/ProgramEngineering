@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="277.0" prefWidth="226.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interest_rates_calc.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="label_1" alignment="CENTER" prefHeight="18.0" prefWidth="306.0" text="Расчёт процентов" />
+   <RadioButton id="rb1" fx:id="rb1" mnemonicParsing="false" onAction="#calculate_procent" text="3 % от числа">
+      <toggleGroup>
+         <ToggleGroup fx:id="interest_rates" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton id="rb2" fx:id="rb2" layoutX="77.0" layoutY="163.0" mnemonicParsing="false" onAction="#calculate_procent" text="10 % от числа" toggleGroup="$interest_rates" />
+   <RadioButton id="rb3" fx:id="rb3" layoutX="77.0" layoutY="182.0" mnemonicParsing="false" onAction="#calculate_procent" text="15% от числа" toggleGroup="$interest_rates" />
+   <Label text="Введите число для расчёта" />
+   <TextField fx:id="tf_1" />
+   <Button mnemonicParsing="false" onAction="#start_the_calculation" text="Произвести расчёт" />
+   <Label text="Результат расчёта" />
+   <TextField fx:id="tf_2" />
+</VBox>

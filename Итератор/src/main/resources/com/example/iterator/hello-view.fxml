@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="236.0" prefWidth="430.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iterator.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <ImageView fx:id="imageGallery" fitHeight="390.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="buttonPrev" mnemonicParsing="false" onAction="#prevImage" text="Назад">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="toStart" mnemonicParsing="false" onAction="#startImage" text="Начало" />
+            <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#nextImage" text="Дальше">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <Button fx:id="choseDirectory" mnemonicParsing="false" onAction="#onChoseDirectory" text="Выбрать каталог" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="buttonStop" mnemonicParsing="false" onAction="#stopAnim" text="Остановить анимацию">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin></Button>
+            <Button fx:id="startButton" alignment="CENTER" mnemonicParsing="false" onAction="#startAnim" text="Запустить анимацию" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class HelloApplication{
+    + void start()
+    + {method} {static} void main()
+}
+class HelloController {
+        {field} - my_canvas : Canvas
+        {field} - gc : GraphicsContext
+        - {method} void onReactClick()
+        - {method} void onTringClick()
+        - {method} void on5GonClick()
+
+}
+
+abstract class Shape {
+    {field} - ShapeColor : Color;
+    {abstract} {method} + String toString()
+    {abstract} {method} + void DrawShape()
+    {method} + Shape()
+}
+
+class Poly{
+    {field} - CanvasHeight : double
+    {field} - CanvasWidth  : double
+    {field} - Radius : double
+    {method} + String toString()
+    {method} + void DrawShape()
+    {method} + void Poly()
+}
+class Line{
+    {field} - length : double
+    {method} + String toString()
+    {method} + void DrawShape()
+    {method} + void Line()
+}
+class Tring{
+    {field} - length : double
+    {field} - height : double
+    {method} + String toString()
+    {method} + void DrawShape()
+    {method} + void Tring()
+}
+class Rectangular{
+    {field} - length : double
+    {field} - height : double
+    {method} + String toString()
+    {method} + void DrawShape()
+    {method} + void Tring()
+}
+
+HelloApplication --|> HelloController
+HelloController  --|> Shape
+Shape --|> Poly
+Shape --|> Line
+Shape --|> Tring
+Shape --|> Rectangular
+@enduml
